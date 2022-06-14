@@ -1,0 +1,627 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+    /* font-family: 'Roboto', sans-serif; */
+}
+html{
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Hachi Maru Pop', cursive;
+    font-size: 1.6rem;
+    font-weight: 400;
+    /* background-color: black; */
+    color: white;
+    position: relative;
+}
+h1,h2,h3,h4,h5{
+    font-weight: 900;
+}
+img{
+
+    max-width: 100%;
+}
+a{
+    text-decoration: none;
+}
+li{
+    list-style: none;
+}
+.container{
+    max-width: 114rem;
+    margin: 0 auto;
+}
+@media only sceen and(max-width:1200px){
+    .container{
+        padding:0 3rem;
+    }
+}
+
+
+
+/* header */
+.header{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-color: #000;
+    z-index: 1;
+    /* display: flex; */
+    
+}
+.header img{
+    box-shadow: inset 0 0 10px #311b0b;
+
+    /* box-shadow: 0 30px 40px rgba(0,0,0,.1); */
+    position: absolute;
+    right: 5%;
+    bottom: 0;
+    width: 50rem;
+    z-index: -1;
+    object-fit: fill;
+    border-radius: 75px 75px 0 0;
+}
+@media only screen and (max-width:996px){
+    .header{
+        min-height: 100vh;
+    }
+    .header img{
+        width: 40rem;
+    }
+}
+@media only screen and (max-width:768px){
+    .header img{
+        width: 35rem;
+    }
+}
+@media only screen and (max-width:567px){
+    .header{
+        min-height: 100vh;
+    }
+    .header img{
+        width: 30rem;
+    }
+}
+@media only screen and (max-width:328px){
+  
+    .header img{
+        width: 28rem;
+    }
+}
+.navigation{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.logo .big{
+    font-size: 5.5rem;
+}
+.nav span{
+    color: red;
+}
+.nav.fix-nav{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: orange;
+    box-shadow: rgba(0, 0, 0, 0.2);
+    z-index: 999;
+}
+.nav-list{   
+    display: flex;
+    align-items: center;
+   
+}
+.nav-item{
+    font-family: 'Roboto', sans-serif;
+    padding: 0.8rem 1rem;
+    font-size: 1.8rem;
+}
+.nav-link{
+    color: aliceblue;
+    padding: 0.8rem 1rem;
+    transition: all 300ms ease;
+}
+.nav-link:hover{
+    border-radius: 0.3rem;
+}
+.ham{
+    display: none;
+}
+.top-nav{
+    display: none;
+}
+@media only screen and (max-width:852px){
+   
+    .menu{
+        position: fixed;
+        top: 0;
+        height: 100%;    
+        left: -100%;
+        width: 80%;
+        max-width: 40rem;
+        background: aliceblue;
+        transition: all 500ms ease-in-out;
+        z-index: 100;
+    }
+    .menu.show{
+        left: 0;
+
+    }
+    .top-nav{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background-color: red;
+        padding: 1rem 1.6rem;
+    }
+    .top-nav.logo .big{
+        font-size: 5.5rem;
+    }
+    .top-nav span{
+        color: black;
+    }
+    .top-nav .close{
+        font-size: 2.3rem;
+        padding: 1rem;
+        cursor: pointer;
+        color: white;
+    }
+    .ham{
+        display: block;
+        font-size: 2.3rem;
+        padding: 1rem;
+        cursor: pointer;
+    }
+    .nav-link{
+        display:block;
+        font-size: 1.7rem;
+        padding: 1rem 0;
+        font-weight: bold;
+        color: red;
+    }
+  
+    body.show::before{
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+    }
+    .nav-list{
+        flex-direction: column;
+        position: absolute;
+        top: 20%;
+        left: 0;       
+        padding: 1rem 1.6rem;
+    }
+    
+}
+.hero{
+    position: absolute;
+    top: 30%;
+    left: 10%;
+}
+.hero h1{
+    font-size: 5rem;
+    color: red;
+}
+.hero h1 span{
+    color: white;
+}
+#type1{
+    color: red;
+}
+.icons span a{
+    color: red;
+    font-size: 2rem;
+    padding: 0.6rem;
+    font-weight: bold;
+}
+.icons i{
+    cursor: pointer;
+}
+.icons{
+    position: absolute;
+    bottom: 5%;
+    left: 10%;
+}
+.icons a:hover{
+    color: white;
+}
+@media only screen and (max-width:480px){
+  
+    .icons{
+       position: absolute;
+       bottom: 45%;
+    }
+}
+
+/* About */
+.section{
+    padding: 4rem 0.7rem 0;
+    overflow-x: hidden;
+}
+.about{
+    margin-top: 5rem;
+}
+.title{
+    margin: 7rem 0.7rem 0;
+    text-align: center;
+}
+.about .title{
+    margin-top: 2rem;
+}
+.title h1{
+    color: red;
+    font-weight: 900;
+    font-size: 4rem;
+    display: inline-block;
+    z-index: 0;
+    font-family: cursive;
+    margin: 3rem;
+}
+
+.about-center{
+    display: grid;
+    grid-template-columns: 1.3fr 1.3fr;
+    gap: 3rem 5rem;
+    color: black;
+    font-family: 'Roboto', sans-serif;
+}
+
+.left p{
+    color: black;
+    margin:2rem;
+    font-weight: 300;
+    font-size: 2rem;
+}
+.left h1 span{
+    color: red;
+    font-weight: 900 ;
+    font-size: 4rem;
+}
+.right .project_title{
+    font-weight: 900 ;
+    font-size: 2rem;
+
+}
+.right span{
+    color: red;
+    font-weight: 900 ;
+    font-size: 4rem;
+}
+.right h1{
+    margin-bottom: 3rem;
+}
+.right p{
+    color: black;
+    margin:1rem;
+    font-weight: 300;
+    font-size: 2rem;
+    font-family: 'Roboto', sans-serif;
+}
+.resume{
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    width: 100%;
+    margin-top:2rem;
+}
+a.btn{
+    width:20rem;
+    text-align: center;
+    display: inline-block;
+    padding: 1rem 2rem;
+    background-color: red;
+    color: white;
+    border-radius: 3px;
+    outline: none;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 2rem;
+    box-shadow: 0 20px 20px rgba(0, 0, 0, 0.2);
+    transition: all 300ms ease-out;
+    margin: 2rem;
+}
+a.btn:hover{
+    transform: translateY(-3px);
+}
+a.btn:active{
+    transform: translateY(0);
+}
+@media only screen and (max-width:852px){
+  .about-center{
+      grid-template-columns: 1fr;
+      gap: 3rem 0;
+  }
+  .left{
+      text-align: center;
+  }
+  .left img{
+      height: 500px;
+      width: 90%;
+  }
+    a.btn{
+        display: flex;
+       align-items: center;
+       justify-content: center;
+    }
+}
+
+
+/* service */
+.theme{
+    background: black;
+}
+.service-container{
+    display: flex;
+    margin: 1rem;
+    padding: 1rem;
+}
+.services {
+    padding: 3rem;
+    margin: 2rem;
+    height: 35rem;
+    text-align: center;
+    width: 60%;
+    /* width: 50rem; */
+    border-radius: 2rem;
+}
+
+.services h2{
+    color: orange;
+}
+.services i{
+    color: red;
+}
+.services p{
+    margin-top: 15px;
+    width: 100%;
+    font-family: 'Roboto', sans-serif;
+    
+}
+.services span{
+    font-size: 4rem;
+}
+@media only screen and (max-width:852px){
+    .title h1{
+        font-size: 2rem;
+    }
+    .service-container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .services{
+        margin: 0;
+        width: 95%;
+    }
+    .services span{
+        font-size: 2rem;
+    }
+}
+.services:hover{
+    background: red;
+    color: white;
+    cursor: pointer;
+}
+.services:hover i{
+    color: aliceblue;
+}
+
+/* skill sec */
+.skills .title{
+    margin-top: 11rem;    
+  
+}
+.skill-center .container{
+    margin-bottom: 16rem;
+}
+.skills-box i{
+    font-size: 4rem;
+    color: black;
+}
+.skills-box h4{
+    color: orange;
+    font-weight: 900;
+}
+.skills-box .skills-desc{
+    width: 100%;
+    position: relative;
+    height: 0.4rem;
+    background-color: #ccc;
+    border-radius: 0.5rem;
+    margin: 1rem;
+}
+.skills-box span{
+    color: black;
+}
+.skills-box .skills-bar{
+    height: 0.4rem;
+    background-color: red;
+}
+.skills-box .html5{
+    width: 85%;
+}
+.skills-box .css{
+    width: 80%;
+}
+.skills-box .js{
+    width: 60%;
+}
+.skills-box .c{
+    width: 95%;
+}
+.skills-box .react{
+    width: 50%;
+}
+.skills-box .node{
+    width: 50%;
+}
+.skills-box .exp{
+    width: 40%;
+}
+.skills-box .mongo{
+    width: 20%;
+}
+.skills-box i:hover{
+    color: red  ;
+}
+.skills-box{
+    margin: 4rem;
+}
+.skills-right{
+
+}
+.skill-center{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 6rem;
+    margin-bottom: 7rem;
+    margin-top: 5rem;
+}
+/* .skills-right h2{
+    color: black;
+    margin-bottom: 3rem;
+}
+.skills-right span{
+    color: red;
+    font-size: 3.54rem;
+}
+.skills-right p{
+    color: black;
+} */
+@media only screen and (max-width:852px){
+   .skill-center{
+       display: flex;
+       flex-direction: column;
+   }
+   .skills-right{
+       text-align: center;
+       margin: 3rem;
+   }
+}
+.team{
+    border-radius: 5rem;
+    background-color: #111;
+    color: aliceblue;
+    padding: 3rem;
+    text-align: center;
+    border-bottom: 4px solid transparent;
+    transition: all 300ms ease-in-out;
+}
+.team .img-cover img{
+    border-radius: 100%;
+    border: 4px solid red;
+    width: 29rem;
+    height: 29rem;
+    object-fit: cover;
+    overflow: hidden;
+    transition: all 300ms ease-in-out;
+}
+.team h2{
+    font-size: 2rem;
+    margin: 2rem;
+    color: orange;
+}
+.team:hover{
+    background-color: red;
+   
+}
+.team:hover .img-cover img{
+    border: 7px solid white;
+}
+
+/* footer */
+footer{
+    margin-top: 3rem;
+    padding: 3rem;
+    background-color: black;
+    text-align: center;
+}
+footer span{
+    color: orange;
+}
+.contact-center {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    font-family: 'Roboto', sans-serif;
+
+}
+.contact .title h2{
+    color: orange;
+    margin-bottom: 3rem;
+}
+.left p{
+    color: black;
+}
+.left i{
+    color: red;
+    margin: 1rem;
+}
+.box{
+    margin: 1rem;
+    color: black;
+    font-weight: 900;
+}
+form div, label{
+    color: orange;
+    font-weight: 700;
+}
+form input{
+    width: 30rem;
+    margin: 1rem 2rem;
+    height: 3rem;
+    padding: 1.5rem;
+}
+form textarea{
+    padding: 1.5rem;
+    margin: 1rem;
+    width: 80%;
+}
+
+.right form {
+    margin-left: 7rem;
+}
+form .btn{
+    text-align: center;
+    width: 80%;
+}
+@media only screen and (max-width:852px){
+   .contact-center{
+       display: flex;
+       flex-direction: column;
+       /* gap: 0; */
+   }
+   .contact-center .left{
+       margin-left: 3rem;
+   }
+   form input{
+       width: 80%;
+       height: 1rem;
+    }
+    form textarea{
+        width: 80%;
+        margin: 1rem;
+}
+   form .btn{
+       width: 50%;
+   }
+   .left .box span{
+        font-size: 1.6rem;
+   }
+   .left{
+       width: 80%;
+   }
+   .left p{
+       width: 100%;
+       margin: 0;
+   }
+ }
